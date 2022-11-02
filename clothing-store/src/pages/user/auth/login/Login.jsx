@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Login.scss'
 
-function Login(props) {
+function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -46,4 +46,4 @@ function Login(props) {
   )
 }
 
-export default Login
+export default LoginPage
