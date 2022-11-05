@@ -1,15 +1,11 @@
 import React from 'react'
 import './Header.scss'
 
-import logo from './../../assets/logo.png'
-
-function Header(props) {
+const Header = () => {
   return (
-    <header className="Header">
-      <div className="wrapper">
-        <div className="logo">
-          <img src={logo} alt="ClothingStore Logo" />
-        </div>
+    <header>
+      <div>
+        <h2>Clothing</h2>
       </div>
     </header>
   )
