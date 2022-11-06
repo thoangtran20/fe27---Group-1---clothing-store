@@ -7,19 +7,19 @@
   .hero__content {
     padding-top: 45px;
 
-    .hero__content h2 {
+    h2 {
       color: #0a1d37;
       font-size: 2.5rem;
       font-weight: 600;
       margin: 20px 0;
     }
 
-    .hero__content p {
+    p {
       color: #444;
       line-height: 28px;
     }
 
-    .hero__content p:nth-child(1) {
+    p:nth-child(1) {
       font-weight: 500;
     }
 
@@ -97,12 +97,15 @@
     color: #0a1d37;
     font-weight: 600;
     margin-top: 20px;
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 
     a {
       text-decoration: none;
       color: unset;
-      letter-spacing: 1px;
-      text-justify: 14px;
     }
 
     a:hover {
@@ -112,11 +115,88 @@
 }
 
 .new__arrivals {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 60px 0px;
+
+  .section__title {
+    color: #0a1d37;
+    font-weight: 600;
+  }
 }
 
 .popular__category {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 60px 0px;
+
+  .section__title {
+    color: #0a1d37;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .hero__section {
+    .hero__content {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    .section__title {
+      font-size: 1.7rem;
+    }
+  }
+  .timer__count {
+    .clock__top-content {
+      text-align: center;
+
+      h4 {
+        font-size: 0.9rem !important;
+      }
+      h3 {
+        font-size: 1rem !important;
+      }
+    }
+    .counter__img {
+      display: none;
+    }
+
+    .store__btn {
+      text-align: center;
+      display: inline-block;
+    }
+
+    .count__down-col {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero__section {
+    .hero__content {
+      h2 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .buy__btn {
+        a {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .section__title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero__section {
+    .hero__content {
+      padding-top: 0;
+      margin-bottom: 40px;
+    }
+  }
 }

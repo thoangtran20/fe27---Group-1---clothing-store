@@ -5,7 +5,7 @@
 // Pages
 // import { Home, Contact } from './pages'
 // // import Homepage from './pages/hompage/Hompage'
-// import './App.css'
+import './App.css'
 
 import Layout from './components/layout/Layout'
 

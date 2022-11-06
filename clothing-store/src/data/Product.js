@@ -29,7 +29,7 @@ import productImg20 from '../assets/images/jean4.jpg'
 const products = [
   {
     id: '01',
-    productName: 'Stone and Beam Westview ',
+    productName: 'FESTIVE SKIRT',
     imgUrl: productImg01,
     category: 'skirt',
     price: 193,
@@ -48,7 +48,7 @@ const products = [
 
   {
     id: '02',
-    productName: 'Rivet Bigelow Modern ',
+    productName: 'JERSEY SKIRT',
     imgUrl: productImg02,
     category: 'skirt',
     price: 253,
@@ -71,7 +71,7 @@ const products = [
 
   {
     id: '03',
-    productName: 'Amazon Brand Modern Sofa',
+    productName: 'WOVEN SKIRT',
     imgUrl: productImg03,
     category: 'skirt',
     price: 173,
@@ -93,7 +93,7 @@ const products = [
   },
   {
     id: '04',
-    productName: 'Rivet Bigelow Modern ',
+    productName: 'SMOCK SKIRT',
     imgUrl: productImg02,
     category: 'skirt',
     price: 253,
@@ -115,7 +115,7 @@ const products = [
   },
   {
     id: '05',
-    productName: 'Fllufy Sheep Sofa',
+    productName: 'SEQUIN SKIRT',
     imgUrl: productImg04,
     category: 'skirt',
     price: 163,
@@ -138,7 +138,7 @@ const products = [
 
   {
     id: '06',
-    productName: 'Faux Velvet Sofa',
+    productName: 'CHECKED OVERSHIRT',
     imgUrl: productImg05,
     category: 'shirt',
     price: 163,
@@ -161,7 +161,7 @@ const products = [
 
   {
     id: '07',
-    productName: 'Fllufy Sheep Sofa',
+    productName: 'ORGANIC COTTON SHIRT',
     imgUrl: productImg06,
     category: 'shirt',
     price: 163,
@@ -183,7 +183,7 @@ const products = [
   },
   {
     id: '08',
-    productName: 'Sakarias Armchair',
+    productName: 'LOOSE FIT SHIRT',
     imgUrl: productImg07,
     category: 'shirt',
     price: 99,
@@ -206,7 +206,7 @@ const products = [
 
   {
     id: '09',
-    productName: 'Baltsar Chair',
+    productName: 'PALM SHORT SLEEVED SHIRT',
     imgUrl: productImg08,
     category: 'shirt',
     price: 89,
@@ -229,7 +229,7 @@ const products = [
 
   {
     id: '10',
-    productName: 'Helmar Chair',
+    productName: 'Journeyman Shirt Jacket',
     imgUrl: productImg09,
     category: 'coat',
     price: 112,
@@ -252,7 +252,7 @@ const products = [
 
   {
     id: '11',
-    productName: 'Apple iPhone 12 Pro',
+    productName: 'Fleece Oversized-Fit Lapel Jacket',
     imgUrl: productImg10,
     category: 'coat',
     price: 799,
@@ -274,7 +274,7 @@ const products = [
   },
   {
     id: '12',
-    productName: 'Sakarias Armchair',
+    productName: 'Heavy-Weight Hooded Puffer Jacket Coat',
     imgUrl: productImg11,
     category: 'coat',
     price: 99,
@@ -296,7 +296,7 @@ const products = [
   },
   {
     id: '11',
-    productName: 'Apple iPhone 12 Max',
+    productName: ' Long-Sleeve Polar Fleece Shirt Jacket',
     imgUrl: productImg12,
     category: 'coat',
     price: 799,
@@ -318,7 +318,7 @@ const products = [
   },
   {
     id: '13',
-    productName: 'Fllufy Sheep Sofa',
+    productName: 'CHIFFON SKIRT',
     imgUrl: productImg03,
     category: 'skirt',
     price: 163,
@@ -341,7 +341,7 @@ const products = [
 
   {
     id: '11',
-    productName: 'Apple iPhone 12 Pro',
+    productName: 'Extreme Comfort Short',
     imgUrl: productImg13,
     category: 'short',
     price: 799,
@@ -363,7 +363,7 @@ const products = [
   },
   {
     id: '12',
-    productName: 'Sakarias Armchair',
+    productName: 'Under Armour Boys Golazo 3.0 Shorts',
     imgUrl: productImg14,
     category: 'short',
     price: 99,
@@ -385,7 +385,7 @@ const products = [
   },
   {
     id: '11',
-    productName: 'Apple iPhone 12 Max',
+    productName: 'Amazon Essentials Men Short',
     imgUrl: productImg15,
     category: 'short',
     price: 799,
@@ -407,7 +407,7 @@ const products = [
   },
   {
     id: '13',
-    productName: 'Fllufy Sheep Sofa',
+    productName: 'Amazon Essentials Men Stretch Jean',
     imgUrl: productImg17,
     category: 'jean',
     price: 163,
@@ -430,7 +430,7 @@ const products = [
 
   {
     id: '11',
-    productName: 'Apple iPhone 12 Pro',
+    productName: 'Wrangler Authentics Men Regular Fit Comfort Flex Waist Jean',
     imgUrl: productImg18,
     category: 'jean',
     price: 799,
@@ -452,7 +452,7 @@ const products = [
   },
   {
     id: '12',
-    productName: 'Sakarias Armchair',
+    productName: 'Amazon Essentials Men Slim-Fit Stretch Jean',
     imgUrl: productImg19,
     category: 'jean',
     price: 99,
@@ -474,7 +474,7 @@ const products = [
   },
   {
     id: '11',
-    productName: 'Apple iPhone 12 Max',
+    productName: 'Calvin Klein Men Skinny Fit Stretch Jeans',
     imgUrl: productImg20,
     category: 'jean',
     price: 799,
@@ -496,7 +496,7 @@ const products = [
   },
   {
     id: '13',
-    productName: 'Fllufy Sheep Sofa',
+    productName: 'Levi 721 High Rise Skinny Jeans',
     imgUrl: productImg18,
     category: 'jean',
     price: 163,

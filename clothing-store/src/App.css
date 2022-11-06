@@ -30,7 +30,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -39,7 +39,7 @@ h6,
 p {
 	padding: 0;
 	margin: 0;
-}
+} */
 
 p {
 	color: var(--small-text-color);
@@ -59,13 +59,17 @@ a {
 	text-decoration: none;
 	color: unset;
 }
-
+/* 
 img {
 	width: 100%;
-}
+} */
 
-section {
+/* section {
 	padding: 60px 0px;
+}  */
+
+@media only screen and (max-width: 576px) {
+	section {
+		padding: 40px 0px;
+	}
 }
-
-
