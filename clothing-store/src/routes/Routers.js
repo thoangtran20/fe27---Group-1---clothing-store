@@ -3,7 +3,7 @@ import Homepage from '../pages/hompage/Hompage'
 import Shop from '../pages/shop/Shop'
 import Cart from '../pages/cart/Cart'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import ProductDetail from '../pages/productCart/ProductDetail'
+import ProductDetail from '../pages/productCart/ProductCardjsx'
 
 const Routers = () => {
   return (
