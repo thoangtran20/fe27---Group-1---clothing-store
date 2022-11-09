@@ -46,9 +46,10 @@
 
   .hero__img {
     padding-top: 40px;
-
     img {
       width: 100%;
+      background-repeat: no-repeat;
+      object-fit: cover;
     }
   }
 }
@@ -139,6 +140,11 @@
     .hero__content {
       h2 {
         font-size: 2rem;
+      }
+    }
+    .hero__img {
+      img {
+        width: 100%;
       }
     }
     .section__title {

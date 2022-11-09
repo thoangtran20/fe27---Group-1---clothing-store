@@ -1,11 +1,11 @@
 import React from 'react'
-import ProductCard from '../productCart/ProductCardjsx'
+import ProductCard from '../productCard/ProductCard'
 
 const ProductList = ({ data }) => {
   return (
     <>
-      {data?.map((item) => (
-        <ProductCard item={item} />
+      {data?.map((item, index) => (
+        <ProductCard item={item} key={index} />
       ))}
     </>
   )

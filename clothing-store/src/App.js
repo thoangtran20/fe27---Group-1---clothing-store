@@ -13,7 +13,7 @@ import CustomerLayout from './layouts/customer-layout/CustomerLayout'
 // import StaffLayout from './layouts/staff-layout/StaffLayout'
 import Cart from './pages/cart/Cart'
 import Homepage from './pages/hompage/Hompage'
-import ProductCard from './pages/productCart/ProductCardjsx'
+import ProductCard from './pages/productCard/ProductCard'
 import ProductList from './pages/productList/ProductList'
 import Shop from './pages/shop/Shop'
 
@@ -27,16 +27,13 @@ function App() {
            <Route path="/admin/login" element={<FullLayout content={<Login role={"ADMIN"}/>} />
            <Route path="/staff/login" element={<FullLayout content={<Login role={"STAFF"}/>} /> */}
           {/* Customer site  */}
-          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/" element={<CustomerLayout content={<Homepage />} />} />
           <Route
-            path="/home"
+            path="home"
             element={<CustomerLayout content={<Homepage />} />}
           />
           <Route path="/cart" element={<CustomerLayout content={<Cart />} />} />
-          <Route
-            path="/shop/:id"
-            element={<CustomerLayout content={<Shop />} />}
-          />
+          <Route path="/shop" element={<CustomerLayout content={<Shop />} />} />
           <Route
             path="/product-list"
             element={<CustomerLayout content={<ProductList />} />}

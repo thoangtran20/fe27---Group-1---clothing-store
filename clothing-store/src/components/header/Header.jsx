@@ -7,6 +7,7 @@ import logo from '../../assets/images/shop_logo.jpg'
 import userIcon from '../../assets/images/user-icon.png'
 import './Header.scss'
 import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
   const nav__links = [
@@ -26,6 +27,8 @@ const Header = () => {
 
   const headerRef = useRef(null)
   const menuRef = useRef(null)
+
+  const totalQuantity = useSelector(state => state.cart.totalQuantity)
 
   const stickyHeaderFunction = () => {
     window.addEventListener('scroll', () => {
@@ -88,7 +91,7 @@ const Header = () => {
                 <i>
                   <RiShoppingBagLine />
                 </i>
-                <span className="badge">2</span>
+                <span className="badge">{totalQuantity}</span>
               </span>
               <span>
                 <motion.img whileTap={{ scale: 1.2 }} src={userIcon} alt="" />
