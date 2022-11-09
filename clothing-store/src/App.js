@@ -1,6 +1,9 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
-import LoginPage from './pages/user/auth/login/Login'
+import { ROUTERS } from './constants'
+import FullLayout from './layouts/full-layout/FullLayout'
+import HomeLayout from './layouts/home-layout/HomeLayout'
+import LoginPage from './pages/user/auth/login/LoginPage'
 
 function App() {
   return (
@@ -8,8 +11,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* Public Route */}
-          <Route path="/" element={<Navigate to="/login" />}></Route>
-          <Route path={'login'} element={<LoginPage />}></Route>
+          <Route path={ROUTERS.home} element={<HomeLayout />}></Route>
+          <Route
+            path={ROUTERS.login}
+            element={<FullLayout content={<LoginPage />} />}
+          ></Route>
         </Routes>
       </BrowserRouter>
       {/* <LoginPage /> */}

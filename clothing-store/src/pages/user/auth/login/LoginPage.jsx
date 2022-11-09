@@ -1,11 +1,18 @@
 import { useState } from 'react'
-import './Login.scss'
+import { useDispatch } from 'react-redux'
+import { loginAction } from '../../../../redux/slice/userSlice'
+import './LoginPage.scss'
 
 function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const handleSubmit = () => {}
+  const dispatch = useDispatch()
+
+  const handleSubmit = (e, value) => {
+    e.preventDefault()
+    dispatch(loginAction(value))
+  }
   return (
     <div className="container">
       <h1>LOGIN</h1>
