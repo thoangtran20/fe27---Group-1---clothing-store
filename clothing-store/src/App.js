@@ -14,6 +14,7 @@ import CustomerLayout from './layouts/customer-layout/CustomerLayout'
 import Cart from './pages/cart/Cart'
 import Homepage from './pages/hompage/Hompage'
 import ProductCard from './pages/productCard/ProductCard'
+import ProductDetail from './pages/productDetail/ProductDetail'
 import ProductList from './pages/productList/ProductList'
 import Shop from './pages/shop/Shop'
 
@@ -37,6 +38,10 @@ function App() {
           <Route
             path="/product-list"
             element={<CustomerLayout content={<ProductList />} />}
+          />
+          <Route
+            path="/shop/:id"
+            element={<CustomerLayout content={<ProductDetail />} />}
           />
           <Route
             path="/product-card"

@@ -106,76 +106,78 @@ const Shop = () => {
       <CommonSection title="Products" />
 
       <section>
-        <Container className="d-flex">
-          <Col lg="3" md="3">
-            <div className="filter__widget">
-              <select onChange={handleFilter}>
-                <option value="all">Filter By Category</option>
-                <option value="skirt">Skirt</option>
-                <option value="shirt">Shirt</option>
-                <option value="coat">Coat</option>
-                <option value="short">Short</option>
-                <option value="jean">Jean</option>
-              </select>
-            </div>
-          </Col>
-          <Col lg="3" md="3">
-            <div className="filter__widget">
-              <select onChange={handleSort}>
-                <option value="no-sort">Sort By</option>
-                <option
-                  value="asc"
-                  id="low"
-                  // onChange={(e) => {
-                  //   setSortItem(e.target.id)
-                  // }}
-                >
-                  Ascending
-                </option>
-                <option
-                  value="desc"
-                  id="high"
-                  // onChange={(e) => {
-                  //   setSortItem(e.target.id)
-                  // }}
-                >
-                  Descending
-                </option>
-                <option
-                  value="nameAZ"
-                  // onChange={(e) => {
-                  //   setSortItem(e.target.id)
-                  // }}
-                >
-                  A - Z
-                </option>
-                <option
-                  value="nameZA"
-                  // onChange={(e) => {
-                  //   setSortItem(e.target.id)
-                  // }}
-                >
-                  Z - A
-                </option>
-              </select>
-            </div>
-          </Col>
+        <Container>
+          <Row>
+            <Col lg="3" md="6">
+              <div className="filter__widget">
+                <select onChange={handleFilter}>
+                  <option value="all">Filter By Category</option>
+                  <option value="skirt">Skirt</option>
+                  <option value="shirt">Shirt</option>
+                  <option value="coat">Coat</option>
+                  <option value="short">Short</option>
+                  <option value="jean">Jean</option>
+                </select>
+              </div>
+            </Col>
+            <Col lg="3" md="6" className="text-end">
+              <div className="filter__widget">
+                <select onChange={handleSort}>
+                  <option value="no-sort">Sort By</option>
+                  <option
+                    value="asc"
+                    id="low"
+                    // onChange={(e) => {
+                    //   setSortItem(e.target.id)
+                    // }}
+                  >
+                    Ascending
+                  </option>
+                  <option
+                    value="desc"
+                    id="high"
+                    // onChange={(e) => {
+                    //   setSortItem(e.target.id)
+                    // }}
+                  >
+                    Descending
+                  </option>
+                  <option
+                    value="nameAZ"
+                    // onChange={(e) => {
+                    //   setSortItem(e.target.id)
+                    // }}
+                  >
+                    A - Z
+                  </option>
+                  <option
+                    value="nameZA"
+                    // onChange={(e) => {
+                    //   setSortItem(e.target.id)
+                    // }}
+                  >
+                    Z - A
+                  </option>
+                </select>
+              </div>
+            </Col>
 
-          <Col lg="6" md="6">
-            <div className="search__box">
-              <input
-                type="text"
-                placeholder="Search....... "
-                className="search__input"
-                onChange={handleSearch}
-              />
-              <span>
-                <i>
-                  <RiSearchLine />
-                </i>
-              </span>
-            </div>
-          </Col>
+            <Col lg="6" md="12">
+              <div className="search__box">
+                <input
+                  type="text"
+                  placeholder="Search....... "
+                  className="search__input"
+                  onChange={handleSearch}
+                />
+                <span>
+                  <i>
+                    <RiSearchLine />
+                  </i>
+                </span>
+              </div>
+            </Col>
+          </Row>
         </Container>
 
         <section className="pt-10">
