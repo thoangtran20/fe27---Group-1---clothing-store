@@ -1,0 +1,16 @@
+.common__section {
+  background-color: linear-gradient(rgba(0, 0, 0, 0.562));
+  background-image: url('../../assets/images/blurred-image-background-with-clothing-store.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  padding: 100px 0px;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+
+  h1 {
+    color: #fff;
+    font-weight: 600;
+  }
+}
