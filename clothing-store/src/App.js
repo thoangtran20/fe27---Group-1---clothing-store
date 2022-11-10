@@ -8,6 +8,7 @@
 import { Navigate, Route, Routes } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
 import './App.css'
+import { ROUTERS } from './constants'
 // import Layout from './components/layout/Layout'
 import CustomerLayout from './layouts/customer-layout/CustomerLayout'
 // import StaffLayout from './layouts/staff-layout/StaffLayout'
@@ -34,13 +35,16 @@ function App() {
             element={<CustomerLayout content={<Homepage />} />}
           />
           <Route path="/cart" element={<CustomerLayout content={<Cart />} />} />
-          <Route path="/shop" element={<CustomerLayout content={<Shop />} />} />
+          <Route
+            path={ROUTERS.shop}
+            element={<CustomerLayout content={<Shop />} />}
+          />
           <Route
             path="/product-list"
             element={<CustomerLayout content={<ProductList />} />}
           />
           <Route
-            path="/shop/:id"
+            path={ROUTERS.productDetail}
             element={<CustomerLayout content={<ProductDetail />} />}
           />
           <Route

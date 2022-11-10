@@ -180,10 +180,10 @@ const Shop = () => {
           </Row>
         </Container>
 
-        <section className="pt-10">
+        <section className='text-center'>
           <Container>
             <Row>
-              {products.length === 0 ? (
+              {productsData.length === 0 ? (
                 <h1>No products are found!</h1>
               ) : (
                 <ProductList data={productsData} />

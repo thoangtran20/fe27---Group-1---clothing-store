@@ -4,14 +4,23 @@ import { motion } from 'framer-motion'
 import './ProductCard.scss'
 // import productImg from '../../assets/images/guides-skirt.jpg'
 import { Col } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { cartActions } from '../../redux/slice/cartSlice'
 import { toast } from 'react-toastify'
+import { ROUTERS } from '../../constants'
 // import { addItem } from '../../redux/slice/cartSlice'
 
 const ProductCard = ({ item }) => {
   const dispatch = useDispatch()
+
+  const { id } = useParams()
+
+  const navigate = useNavigate()
+
+  const gotoDetail = () => {
+    navigate(`${ROUTERS.shop}/${item.id}`)
+  }
 
   const addToCart = () => {
     dispatch(
@@ -28,7 +37,12 @@ const ProductCard = ({ item }) => {
     <Col lg="3" md="4" className="mb-2">
       <div className="product__item">
         <div className="product__img">
-          <motion.img whileHover={{ scale: 0.9 }} src={item.imgUrl} alt="" />
+          <motion.img
+            whileHover={{ scale: 0.9 }}
+            src={item.imgUrl}
+            alt=""
+            onClick={gotoDetail}
+          />
         </div>
         <div className="p-2 product__info">
           <h3 className="product__name">
