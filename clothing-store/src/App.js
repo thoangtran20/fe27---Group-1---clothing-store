@@ -29,18 +29,20 @@ function App() {
            <Route path="/admin/login" element={<FullLayout content={<Login role={"ADMIN"}/>} />
            <Route path="/staff/login" element={<FullLayout content={<Login role={"STAFF"}/>} /> */}
           {/* Customer site  */}
-          <Route path="/" element={<CustomerLayout content={<Homepage />} />} />
           <Route
-            path="home"
+            path={ROUTERS.home}
             element={<CustomerLayout content={<Homepage />} />}
           />
-          <Route path="/cart" element={<CustomerLayout content={<Cart />} />} />
+          <Route
+            path={ROUTERS.cart}
+            element={<CustomerLayout content={<Cart />} />}
+          />
           <Route
             path={ROUTERS.shop}
             element={<CustomerLayout content={<Shop />} />}
           />
           <Route
-            path="/product-list"
+            path={ROUTERS.productList}
             element={<CustomerLayout content={<ProductList />} />}
           />
           <Route
@@ -48,7 +50,7 @@ function App() {
             element={<CustomerLayout content={<ProductDetail />} />}
           />
           <Route
-            path="/product-card"
+            path={ROUTERS.productCard}
             element={<CustomerLayout content={<ProductCard />} />}
           />
           {/* Staff layout */}

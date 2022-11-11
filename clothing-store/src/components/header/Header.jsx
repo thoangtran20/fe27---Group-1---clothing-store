@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { RiShoppingBagLine, RiHeartLine, RiMenuLine } from 'react-icons/ri'
 import { Container, Row } from 'reactstrap'
 import { motion } from 'framer-motion'
@@ -8,6 +8,7 @@ import userIcon from '../../assets/images/user-icon.png'
 import './Header.scss'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { ROUTERS } from '../../constants'
 
 const Header = () => {
   const nav__links = [
@@ -28,7 +29,9 @@ const Header = () => {
   const headerRef = useRef(null)
   const menuRef = useRef(null)
 
-  const totalQuantity = useSelector(state => state.cart.totalQuantity)
+  const navigate = useNavigate()
+
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity)
 
   const stickyHeaderFunction = () => {
     window.addEventListener('scroll', () => {
@@ -45,6 +48,10 @@ const Header = () => {
 
   const menuToggle = () => {
     menuRef.current.classList.toggle('active__menu')
+  }
+
+  const navigateToCart = () => {
+    navigate(ROUTERS.cart)
   }
 
   useEffect(() => {
@@ -87,7 +94,7 @@ const Header = () => {
                 </i>
                 <span className="badge">1</span>
               </span>
-              <span className="cart__icon">
+              <span className="cart__icon" onClick={navigateToCart}>
                 <i>
                   <RiShoppingBagLine />
                 </i>
