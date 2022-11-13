@@ -5,6 +5,7 @@ export const ROUTERS = {
   home: '/',
   shop: '/shop',
   cart: '/cart',
+  checkout: '/checkout',
 }
 
 export const localStorageKey = {

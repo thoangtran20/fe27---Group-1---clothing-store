@@ -13,6 +13,7 @@ import { ROUTERS } from './constants'
 import CustomerLayout from './layouts/customer-layout/CustomerLayout'
 // import StaffLayout from './layouts/staff-layout/StaffLayout'
 import Cart from './pages/cart/Cart'
+import Checkout from './pages/checkout/Checkout'
 import Homepage from './pages/hompage/Hompage'
 import ProductCard from './pages/productCard/ProductCard'
 import ProductDetail from './pages/productDetail/ProductDetail'
@@ -52,6 +53,10 @@ function App() {
           <Route
             path={ROUTERS.productCard}
             element={<CustomerLayout content={<ProductCard />} />}
+          />
+          <Route
+            path={ROUTERS.checkout}
+            element={<CustomerLayout content={<Checkout />} />}
           />
           {/* Staff layout */}
 
