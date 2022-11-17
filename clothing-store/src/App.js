@@ -8,9 +8,11 @@
 import { Navigate, Route, Routes } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
 import './App.css'
+import Loader from './components/loader/Loader'
 import { ROUTERS } from './constants'
 // import Layout from './components/layout/Layout'
 import CustomerLayout from './layouts/customer-layout/CustomerLayout'
+import FullLayout from './layouts/full-layout/FullLayout'
 // import StaffLayout from './layouts/staff-layout/StaffLayout'
 import Cart from './pages/cart/Cart'
 import Checkout from './pages/checkout/Checkout'
@@ -19,6 +21,9 @@ import ProductCard from './pages/productCard/ProductCard'
 import ProductDetail from './pages/productDetail/ProductDetail'
 import ProductList from './pages/productList/ProductList'
 import Shop from './pages/shop/Shop'
+import LoginPage from './pages/user/auth/login/LoginPage'
+import RegisterPage from './pages/user/auth/register/RegisterPage'
+import Reset from './pages/user/auth/reset/Reset'
 
 function App() {
   return (
@@ -58,8 +63,23 @@ function App() {
             path={ROUTERS.checkout}
             element={<CustomerLayout content={<Checkout />} />}
           />
+          <Route
+            path={ROUTERS.login}
+            element={<FullLayout content={<LoginPage />} />}
+          />
+          <Route
+            path={ROUTERS.register}
+            element={<FullLayout content={<RegisterPage />} />}
+          />
+          <Route
+            path={ROUTERS.reset}
+            element={<FullLayout content={<Reset />} />}
+          />
+          <Route
+            path={ROUTERS.reset}
+            element={<FullLayout content={<Reset />} />}
+          />
           {/* Staff layout */}
-
           {/* <Route
             path="/staff/product"
             element={<StaffLayout content={<ProductManagement />} />}
@@ -68,7 +88,6 @@ function App() {
             path="/staff/order"
             element={<StaffLayout content={<OrderManagement />} />}
           /> */}
-
           {/* <Route path="home" element={<Homepage />} />
           <Route path="shop" element={<Shop />} />
           <Route path="shop/:id" element={<ProductCard />} />

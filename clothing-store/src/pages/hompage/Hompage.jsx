@@ -10,15 +10,36 @@ import Services from '../services/Services'
 import ProductList from '../productList/ProductList'
 import products from '../../data/Product'
 import Clock from '../../components/UI/Clock'
+import { db } from '../../firebase/firebaseConfig'
 
 const Homepage = () => {
   // const [data, setData] = useState(products)
+
   const [trendingProducts, setTrendingProducts] = useState([])
   const [bestSalesProducts, setBestSalesProducts] = useState([])
   const [shortProducts, setShortProducts] = useState([])
   const [coatProducts, setCoatProducts] = useState([])
   const [popularProducts, setPopularProducts] = useState([])
 
+  // useEffect(() => {
+  //   db.collection('products')
+  //     .get()
+  //     .then((snapshot) => {
+  //       const products = []
+  //       snapshot.forEach((doc) => {
+  //         const data = doc.data()
+  //         console.log(data)
+  //         products.push(data)
+  //       })
+
+  //       console.log(snapshot)
+  //     })
+  //     .catch((error) => console.log(error))
+  // }, [])
+
+  // const products =
+
+  // console.log(products)
   const year = new Date().getFullYear()
 
   useEffect(() => {

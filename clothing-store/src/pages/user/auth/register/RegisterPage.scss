@@ -1,0 +1,79 @@
+.register__form {
+  width: 420px;
+  margin: 10vh auto;
+  background-color: #f3f3f3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  .form__signup {
+    width: 100%;
+    max-width: 410px;
+    padding: 15px;
+    margin: auto;
+
+    .form-control {
+      position: relative;
+      box-sizing: border-box;
+      height: auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .form-control:focus {
+      z-index: 2;
+    }
+
+    input[type='email'] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    input[type='password'] {
+      border-top-right-radius: 0;
+      margin-top: 10px;
+      border-top-left-radius: 0;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    button[type='submit'] {
+      margin: 10px auto;
+      display: flex;
+
+      i {
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+      }
+    }
+
+    .navigate {
+      p {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .navLink {
+        padding: 10px;
+        i {
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      padding-top: 10px;
+      color: #1cd6ce;
+      text-align: center;
+    }
+
+    .lines {
+      width: 200px;
+      border: 1px solid red;
+    }
+  }
+}

@@ -28,7 +28,7 @@ import productImg20 from '../assets/images/jean4.jpg'
 
 const products = [
   {
-    id: '01',
+    id: '263ad257-6cb0-4926-bd47-ef8c2eb14900',
     productName: 'FESTIVE SKIRT',
     imgUrl: productImg01,
     category: 'skirt',

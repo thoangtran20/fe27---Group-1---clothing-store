@@ -3,12 +3,21 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { RiShoppingBagLine, RiHeartLine, RiMenuLine } from 'react-icons/ri'
 import { Container, Row } from 'reactstrap'
 import { motion } from 'framer-motion'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
+
 import logo from '../../assets/images/shop_logo.jpg'
 import userIcon from '../../assets/images/user-icon.png'
 import './Header.scss'
 import { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { ROUTERS } from '../../constants'
+import { useState } from 'react'
+import { auth } from '../../firebase/firebaseConfig'
+import {
+  REMOVE_ACTIVE_USER,
+  SET_ACTIVE_USER,
+} from '../../redux/slice/authSlice'
+import { toast } from 'react-toastify'
 
 const Header = () => {
   const nav__links = [
@@ -28,6 +37,10 @@ const Header = () => {
 
   const headerRef = useRef(null)
   const menuRef = useRef(null)
+
+  const [displayName, setDisplayName] = useState('')
+
+  const dispatch = useDispatch()
 
   const navigate = useNavigate()
 
@@ -54,11 +67,57 @@ const Header = () => {
     navigate(ROUTERS.cart)
   }
 
+  const navigateToLogin = () => {
+    navigate(ROUTERS.login)
+  }
+
   useEffect(() => {
     stickyHeaderFunction()
 
     return () => window.removeEventListener('scroll', stickyHeaderFunction)
   })
+
+  useEffect(() => {
+    onAuthStateChanged(
+      auth,
+      (user) => {
+        if (user) {
+          console.log(user)
+          if (user.displayName == null) {
+            const u1 = user.email.substring(0, user.email.indexOf('@'))
+            const uName = u1.charAt(0).toUpperCase() + u1.slice(1)
+            setDisplayName(uName)
+          } else {
+            setDisplayName(user.displayName)
+          }
+
+          dispatch(
+            SET_ACTIVE_USER({
+              email: user.email,
+              userName: user.userName ? user.displayName : displayName,
+              userID: user.uid,
+            }),
+          )
+        } else {
+          setDisplayName('')
+          dispatch(REMOVE_ACTIVE_USER)
+        }
+      },
+      [dispatch, displayName],
+    )
+  })
+
+  const logoutUser = () => {
+    signOut(auth)
+      .then(() => {
+        toast.success('Logout Successful')
+        navigate('/')
+      })
+      .catch((error) => {
+        toast.error(error.message)
+      })
+  }
+
   return (
     <header className="header" ref={headerRef}>
       <Container>
@@ -101,7 +160,12 @@ const Header = () => {
                 <span className="badge">{totalQuantity}</span>
               </span>
               <span>
-                <motion.img whileTap={{ scale: 1.2 }} src={userIcon} alt="" />
+                <motion.img
+                  whileTap={{ scale: 1.2 }}
+                  src={userIcon}
+                  alt=""
+                  onClick={navigateToLogin}
+                />
               </span>
 
               <div className="mobile__menu">
